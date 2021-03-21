@@ -15,12 +15,14 @@ public class App {
     public static void main(String[] args) {
         process();
     }
+
     private static void process() {
         String[] values = {TWELVE, SEVENTY_NINE};
         boolean allPositiveNumbers = Utils.isAllPositiveNumbers(values);
-        if(!allPositiveNumbers){
+        if (!allPositiveNumbers) {
             List<String> negativeAndStrings = Utils.getNegativeAndStrings(values);
             LOGGER.info(MESSAGE + negativeAndStrings);
-	}
+            //b4 2nd cmmt
+        }
     }
 }
