@@ -21,7 +21,6 @@ public class App {
         if(!allPositiveNumbers){
             List<String> negativeAndStrings = Utils.getNegativeAndStrings(values);
             LOGGER.info(MESSAGE + negativeAndStrings);
-            //ff
-        }
+	}
     }
 }
