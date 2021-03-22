@@ -20,11 +20,18 @@ public class Utils {
     public static boolean isAllPositiveNumbers(String... str) {
        return Arrays.stream(str).allMatch(StringUtils::isPositiveNumber);
     }
+//
+//    public static List<String> getNegativeAndStrings(String... str) {
+//        return (List<String>)CollectionUtils.selectRejected(
+//                List.of(str),
+//                (value)-> PATTERN.matcher(value).matches()
+//        );
+//    }
 
     public static List<String> getNegativeAndStrings(String... str) {
         return (List<String>)CollectionUtils.selectRejected(
                 List.of(str),
-                (value)-> PATTERN.matcher(value).matches()
+                StringUtils::isPositiveNumber
         );
     }
 }
